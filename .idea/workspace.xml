@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9cd283ac-1d5f-4164-8463-230615021970" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tpII_osa/Buffer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpII_osa/Dados.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpII_osa/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpII_osa/Registro.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpII_osa/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpI_osa/Arquivo.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpI_osa/Arquivo.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpI_osa/Buffer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpI_osa/Buffer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpI_osa/Registro.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpI_osa/Registro.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpI_osa/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpI_osa/textos/Nomes_Idades_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tec_heuristica/entrada/X-n1001-k43.vrp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tec_heuristica/entrada/X-n101-k25.vrp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tec_heuristica/include/Edge.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tec_heuristica/include/Interface.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tec_heuristica/include/PhysarumSolver.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tec_heuristica/include/Route.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tec_heuristica/src/Edge.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tec_heuristica/src/Interface.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tec_heuristica/src/PhysarumSolver.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tec_heuristica/src/Route.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2oqQ7tB2UorMXhHrux97hdwNg76" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/jotavsevla/CLionProjects/OSA/tpII_osa",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tpII_osa" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9cd283ac-1d5f-4164-8463-230615021970" name="Changes" comment="" />
+      <created>1731594461726</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731594461726</updated>
+      <workItem from="1731594463177" duration="2376000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
