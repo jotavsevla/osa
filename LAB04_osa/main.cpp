@@ -6,29 +6,29 @@ int main() {
 
     try {
         // 1. Criar arquivo principal e índice a partir do CSV
-        std::cout << "Criando arquivos a partir do CSV..." << std::endl;
+        cout << "Criando arquivos a partir do CSV..." << endl;
         manager.createFromCSV("/Users/jotavsevla/CLionProjects/OSA/LAB04_osa/BooksDataset.csv");
-        std::cout << "Arquivos criados com sucesso!\n" << std::endl;
+        cout << "Arquivos criados com sucesso!\n" << endl;
 
         // 2. Demonstrar consultas por ID retornando título
-        std::cout << "=== Consultas por título ===" << std::endl;
+        cout << "=== Consultas por título ===" << endl;
         int ids[] = {105, 203, 82087, 90878};
         for (int id : ids) {
-            std::string title = manager.getTitleById(id);
-            std::cout << "Título do livro " << id << ": " << title << std::endl;
+            string title = manager.getTitleById(id);
+            cout << "Título do livro " << id << ": " << title << std::endl;
         }
-        std::cout << std::endl;
+        cout << endl;
 
         // 3. Demonstrar consultas por ID retornando autor
-        std::cout << "=== Consultas por autor ===" << std::endl;
+        cout << "=== Consultas por autor ===" << endl;
         for (int id : ids) {
-            std::string author = manager.getAuthorById(id);
-            std::cout << "Autor do livro " << id << ": " << author << std::endl;
+            string author = manager.getAuthorById(id);
+            cout << "Autor do livro " << id << ": " << author << endl;
         }
-        std::cout << std::endl;
+        cout << endl;
 
         // 4. Demonstrar inserção de novos livros e atualização do índice
-        std::cout << "=== Teste de inserção ===" << std::endl;
+        cout << "=== Teste de inserção ===" << endl;
         Book newBooks[] = {
                 {999997, "Clean Code", "Robert C. Martin", 2008, "Programming,Software Engineering"},
                 {999998, "Design Patterns", "Gang of Four", 1994, "Programming,Software Engineering"},
@@ -37,15 +37,15 @@ int main() {
 
         for (const auto& book : newBooks) {
             manager.insertBook(book);
-            std::cout << "Livro inserido - ID: " << book.id << ", Título: " << book.title << std::endl;
+            cout << "Livro inserido - ID: " << book.id << ", Título: " << book.title << endl;
 
             // Verificar se foi inserido corretamente
             Book retrieved = manager.getBookById(book.id);
-            std::cout << "Verificação - Título: " << retrieved.title << ", Autor: " << retrieved.authors << std::endl;
+            cout << "Verificação - Título: " << retrieved.title << ", Autor: " << retrieved.authors << endl;
         }
 
     } catch (const std::exception& e) {
-        std::cerr << "Erro: " << e.what() << std::endl;
+        cerr << "Erro: " << e.what() << endl;
         return 1;
     }
 

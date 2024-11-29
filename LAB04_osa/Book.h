@@ -6,16 +6,18 @@
 #include <sstream>
 #include <cstring>
 
+using namespace std;
+
 class Book {
 public:
     int id;
-    std::string title;
-    std::string authors;
+    string title;
+    string authors;
     int year;
-    std::string categories;
+    string categories;
 
-    std::string pack() const;
-    bool unpack(const std::string& buffer);
+    string pack() const;
+    bool unpack(const string& buffer);
 };
 
 #endif

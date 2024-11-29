@@ -8,19 +8,19 @@
 
 class FileManager {
 private:
-    std::string dataFile;
-    std::string indexFile;
+    string dataFile;
+    string indexFile;
     BSTreeNode* root;
 
     void insertNode(BSTreeNode*& node, IndexEntry entry);
     BSTreeNode* search(BSTreeNode* node, int id);
 
 public:
-    FileManager(const std::string& dataPath, const std::string& indexPath);
-    void createFromCSV(const std::string& csvPath);
+    FileManager(const string& dataPath, const string& indexPath);
+    void createFromCSV(const string& csvPath);
     Book getBookById(int id);
-    std::string getTitleById(int id);
-    std::string getAuthorById(int id);
+    string getTitleById(int id);
+    string getAuthorById(int id);
     void loadIndexFromFile();
     void saveIndexToFile();
     void insertBook(const Book& book);
