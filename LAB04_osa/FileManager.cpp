@@ -110,7 +110,7 @@ Book FileManager::getBookById(int id) {
 }
 
 void FileManager::insertBook(const Book& book) {
-    std::ofstream outFile(dataFile, ios::binary | std::ios::app);
+    ofstream outFile(dataFile, ios::binary | ios::app);
 
     long position = outFile.tellp();
     std::string packed = book.pack();

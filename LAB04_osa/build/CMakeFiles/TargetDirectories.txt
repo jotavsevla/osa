@@ -1,0 +1,3 @@
+/Users/jotavsevla/CLionProjects/OSA/LAB04_osa/build/CMakeFiles/LAB04_osa.dir
+/Users/jotavsevla/CLionProjects/OSA/LAB04_osa/build/CMakeFiles/edit_cache.dir
+/Users/jotavsevla/CLionProjects/OSA/LAB04_osa/build/CMakeFiles/rebuild_cache.dir
