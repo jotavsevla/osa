@@ -1,3 +1,0 @@
-/Users/jotavsevla/CLionProjects/OSA/LAB04_osa/cmake-build-debug/CMakeFiles/LAB04_osa.dir
-/Users/jotavsevla/CLionProjects/OSA/LAB04_osa/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/jotavsevla/CLionProjects/OSA/LAB04_osa/cmake-build-debug/CMakeFiles/rebuild_cache.dir

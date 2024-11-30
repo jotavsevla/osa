@@ -1,1 +1,0 @@
-/usr/local/bin/g++-13 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/LAB04_osa.dir/main.cpp.o CMakeFiles/LAB04_osa.dir/Book.cpp.o CMakeFiles/LAB04_osa.dir/FileManager.cpp.o -o LAB04_osa
