@@ -2,6 +2,7 @@
 #include "FileManager.h"
 #include <iostream>
 
+
 FileManager::FileManager(const string& dataPath, const string& indexPath)
         : dataFile(dataPath), indexFile(indexPath), root(nullptr) {}
 
@@ -32,8 +33,8 @@ void FileManager::createFromCSV(const string& csvPath) {
         throw runtime_error("Could not open CSV file");
     }
 
-    ofstream outFile(dataFile, std::ios::binary);
-    ofstream idxFile(indexFile, std::ios::binary);
+    ofstream outFile(dataFile, ios::binary);
+    ofstream idxFile(indexFile, ios::binary);
 
     string line;
     getline(csvFile, line); // Skip header
@@ -79,7 +80,7 @@ void FileManager::createFromCSV(const string& csvPath) {
             insertNode(root, entry);
 
             idxFile.write(reinterpret_cast<char*>(&entry), sizeof(IndexEntry));
-        } catch (const std::exception& e) {
+        } catch (const exception& e) {
             cerr << "Error processing line: " << line << "\n";
             continue;
         }
@@ -94,7 +95,7 @@ Book FileManager::getBookById(int id) {
     BSTreeNode* node = search(root, id);
     if (!node) throw runtime_error("Book not found");
 
-    std::ifstream file(dataFile, ios::binary);
+    ifstream file(dataFile, ios::binary);
     file.seekg(node->data.position);
 
     int size;
@@ -113,7 +114,7 @@ void FileManager::insertBook(const Book& book) {
     ofstream outFile(dataFile, ios::binary | ios::app);
 
     long position = outFile.tellp();
-    std::string packed = book.pack();
+    string packed = book.pack();
     outFile.write(packed.c_str(), packed.length());
 
     IndexEntry entry{book.id, position};
@@ -123,26 +124,26 @@ void FileManager::insertBook(const Book& book) {
     outFile.close();
 }
 
-std::string FileManager::getTitleById(int id) {
+string FileManager::getTitleById(int id) {
     try {
         Book book = getBookById(id);
         return book.title;
-    } catch (const std::exception& e) {
+    } catch (const exception& e) {
         return "Book not found";
     }
 }
 
-std::string FileManager::getAuthorById(int id) {
+string FileManager::getAuthorById(int id) {
     try {
         Book book = getBookById(id);
         return book.authors;
-    } catch (const std::exception& e) {
+    } catch (const exception& e) {
         return "Book not found";
     }
 }
 
 void FileManager::loadIndexFromFile() {
-    std::ifstream idxFile(indexFile, std::ios::binary);
+    ifstream idxFile(indexFile, ios::binary);
     if (!idxFile) return;
 
     IndexEntry entry;
@@ -152,18 +153,19 @@ void FileManager::loadIndexFromFile() {
     idxFile.close();
 }
 
+// Adicione esta função auxiliar fora da classe
+void FileManager::traverseAndSave(BSTreeNode* node, ofstream& idxFile) {
+    if (!node) return;
+    traverseAndSave(node->left, idxFile);
+    idxFile.write(reinterpret_cast<char*>(&node->data), sizeof(IndexEntry));
+    traverseAndSave(node->right, idxFile);
+}
+
 void FileManager::saveIndexToFile() {
-    std::ofstream idxFile(indexFile, std::ios::binary);
+    ofstream idxFile(indexFile, ios::binary);
     if (!idxFile) return;
-
-    std::function<void(BSTreeNode*)> inorderTraversal = [&](BSTreeNode* node) {
-        if (!node) return;
-        inorderTraversal(node->left);
-        idxFile.write(reinterpret_cast<char*>(&node->data), sizeof(IndexEntry));
-        inorderTraversal(node->right);
-    };
-
-    inorderTraversal(root);
+    
+    traverseAndSave(root, idxFile);
     idxFile.close();
 }
 

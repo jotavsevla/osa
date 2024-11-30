@@ -5,8 +5,10 @@
 #include <string>
 #include <sstream>
 #include <cstring>
+#include <functional>
 
 using namespace std;
+using std::function;
 
 class Book {
 public:

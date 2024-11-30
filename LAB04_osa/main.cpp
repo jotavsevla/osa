@@ -15,7 +15,7 @@ int main() {
         int ids[] = {105, 203, 82087, 90878};
         for (int id : ids) {
             string title = manager.getTitleById(id);
-            cout << "Título do livro " << id << ": " << title << std::endl;
+            cout << "Título do livro " << id << ": " << title << endl;
         }
         cout << endl;
 
@@ -44,7 +44,7 @@ int main() {
             cout << "Verificação - Título: " << retrieved.title << ", Autor: " << retrieved.authors << endl;
         }
 
-    } catch (const std::exception& e) {
+    } catch (const exception& e) {
         cerr << "Erro: " << e.what() << endl;
         return 1;
     }

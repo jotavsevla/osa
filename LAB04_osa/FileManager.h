@@ -14,6 +14,7 @@ private:
 
     void insertNode(BSTreeNode*& node, IndexEntry entry);
     BSTreeNode* search(BSTreeNode* node, int id);
+    void traverseAndSave(BSTreeNode* node, ofstream& idxFile);
 
 public:
     FileManager(const string& dataPath, const string& indexPath);
